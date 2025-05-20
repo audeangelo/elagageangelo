@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 126 325" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-933.382,-637.508)">
+        <g id="arbre-complet" transform="matrix(0.293521,0,0,0.293521,611.512,406.367)">
+            <g id="rondin4" transform="matrix(1,0,0,1,2.10853,748.527)">
+                <g transform="matrix(1.58436,0,0,1.23339,-871.493,-255.285)">
+                    <path d="M1255.27,1093.8L1254.65,1093.8L1254.65,889.535L1498.45,889.535L1498.45,1092.32C1498.51,1092.66 1498.54,1093 1498.54,1093.34C1498.54,1107.54 1444.04,1119.06 1376.9,1119.06C1310.48,1119.06 1256.42,1107.78 1255.27,1093.8Z" style="fill:white;stroke:black;stroke-width:27.74px;"/>
+                </g>
+                <ellipse cx="1309.01" cy="841.764" rx="192.733" ry="34.593" style="fill:white;stroke:black;stroke-width:39.39px;"/>
+            </g>
+            <g id="rondin-3" transform="matrix(1,0,0,1,0.377848,500.217)">
+                <g transform="matrix(1.58436,0,0,1.23339,-871.493,-255.285)">
+                    <path d="M1255.27,1093.8L1254.65,1093.8L1254.65,889.535L1498.45,889.535L1498.45,1092.32C1498.51,1092.66 1498.54,1093 1498.54,1093.34C1498.54,1107.54 1444.04,1119.06 1376.9,1119.06C1310.48,1119.06 1256.42,1107.78 1255.27,1093.8Z" style="fill:white;stroke:black;stroke-width:27.74px;"/>
+                </g>
+                <ellipse cx="1309.01" cy="841.764" rx="192.733" ry="34.593" style="fill:white;stroke:black;stroke-width:39.39px;"/>
+            </g>
+            <g id="rondin-2" transform="matrix(1,0,0,1,0.377848,252.348)">
+                <g transform="matrix(1.58436,0,0,1.23339,-871.493,-255.285)">
+                    <path d="M1255.27,1093.8L1254.65,1093.8L1254.65,889.535L1498.45,889.535L1498.45,1092.32C1498.51,1092.66 1498.54,1093 1498.54,1093.34C1498.54,1107.54 1444.04,1119.06 1376.9,1119.06C1310.48,1119.06 1256.42,1107.78 1255.27,1093.8Z" style="fill:white;stroke:black;stroke-width:27.74px;"/>
+                </g>
+                <ellipse cx="1309.01" cy="841.764" rx="192.733" ry="34.593" style="fill:white;stroke:black;stroke-width:39.39px;"/>
+            </g>
+            <g id="rondin-1">
+                <g transform="matrix(1.58436,0,0,1.23339,-871.493,-255.285)">
+                    <path d="M1255.27,1093.8L1254.65,1093.8L1254.65,889.535L1498.45,889.535L1498.45,1092.32C1498.51,1092.66 1498.54,1093 1498.54,1093.34C1498.54,1107.54 1444.04,1119.06 1376.9,1119.06C1310.48,1119.06 1256.42,1107.78 1255.27,1093.8Z" style="fill:white;stroke:black;stroke-width:27.74px;"/>
+                </g>
+                <ellipse cx="1309.01" cy="841.764" rx="192.733" ry="34.593" style="fill:white;stroke:black;stroke-width:39.39px;"/>
+            </g>
+        </g>
+    </g>
+</svg>

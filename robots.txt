@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# sitemap :
+# Sitemap: https://audeangelo.github.io/elagageangelo/sitemap.xml
