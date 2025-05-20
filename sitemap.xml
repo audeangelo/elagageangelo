@@ -31,11 +31,6 @@
     <priority>0.8</priority>
   </url>
 
-    <url>
-    <loc>https://audeangelo.github.io/elagageangelo/mentions-legales.html</loc>
-    <lastmod>2025-05-16</lastmod>
-    <priority>0.3</priority>
-  </url>
 
     <url>
     <loc>https://audeangelo.github.io/elagageangelo/mentions-legales.html</loc>
@@ -49,9 +44,9 @@
     <priority>0.3</priority>
   </url>
 
- <url>
+ <!-- <url>
   <loc>https://audeangelo.github.io/elagageangelo/google16e764ce838ec78b.html</loc>
-</url>
+</url> -->
 
 
 
