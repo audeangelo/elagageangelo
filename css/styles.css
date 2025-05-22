@@ -44,21 +44,32 @@
 }
 
 .header-background {
-    position: relative;
-    min-height: 100VH;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
     background-image: url("../images/ai-generated-8550769_1280.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
+   
   }
 
-
+  .overlay-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
   
 
 nav {
     /* border: 2px dashed red; */
+    width: 100%;
     background-color: rgba(31, 41, 55, 0.9);
     display: flex;
     flex-direction: row;
@@ -172,25 +183,20 @@ nav a {
 /* ========== OVERLAY ========== */
 
 .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* centre parfaitement */
-    width: clamp(30rem, 90%, 1200rem);
-    background-color: rgba(7, 7, 7, 0.5);
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    padding: clamp(2rem, 5vw,7rem);
+  width: 100%;
+  max-width: clamp(30rem, 90%, 120rem);
+  background-color: rgba(7, 7, 7, 0.5);
+  padding: clamp(2rem, 5vw, 7rem);
   text-align: center;
-/* background-color: rgba(255, 255, 255, 0.3); */
   color: white;
   border-radius: 0.5rem;
-  z-index: 1;
 }
 
 .overlay h1, .overlay p {
 
     text-align: center;
     color: rgb(255, 255, 255);
+
 }
 
 .overlay h1 {
@@ -199,7 +205,7 @@ nav a {
     padding: 2.5rem 0;
     /* font-weight: 300; */
     letter-spacing: 0.1rem;
-    line-height: 0.2;
+    line-height: 1;
      
   }
 
@@ -215,7 +221,6 @@ color: rgba(255, 255, 255, 0.64);
     /* font-weight: 300; */
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    line-height: 1.5;
 }
 
 /* ========== BOUTON CTA ========== */
@@ -444,7 +449,7 @@ color: rgba(255, 255, 255, 0.64);
 
   /* MODIFICATION ICI */
   width: 100%;
-  max-width: 120rem; /* ← 900px max par sécurité */
+  max-width: 90rem; /* ← 900px max par sécurité */
   padding: clamp(2rem, 4vw, 7rem);
 
   background-color: rgba(0, 0, 0, 0.5);
