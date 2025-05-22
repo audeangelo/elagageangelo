@@ -30,7 +30,7 @@
   }
 
   h3 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2.5rem, 3vw, 3.5rem);
     font-weight: 500;
   }
   
@@ -210,6 +210,7 @@ color: rgba(255, 255, 255, 0.64);
     /* Pour compatibilité éventuelle */
     /* font-weight: 300; */
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
     line-height: 1.5;
 }
 
@@ -270,86 +271,73 @@ color: rgba(255, 255, 255, 0.64);
   color: white;
 }
 
-.services h2 {
+.services h2{
+  padding-top: 10rem;
+}
+.services h2, h3 {
  text-align: center;
- padding-top: 10rem;
+ line-height: 1.5;
+  
+}
+
+.services > h3 {
+  color: var(--green);
+  text-transform: uppercase;
 }
 
 
 .container_services {
 
   margin: 0 auto;
-  width: clamp(30rem, 85%, 1200rem);
+  width: clamp(30rem, 90%, 1200rem);
   text-align: center;
   padding: 9rem 0;
-}
 
-.container_services h2 {
-  padding-bottom: 3.5rem;
-}
-
-
-.container-service {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
- 
-  position: relative;
-}
-
-
-
-.container-service img {
-  display: block;
-  width: 100%;
-
-
-}
-
-.photos_services {
-  aspect-ratio: 3 / 1.7;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  transition-duration: 0.5s;
-}
-
-.photos_services:hover {
-  filter: brightness(60%);
-
-  /* filter:  rgba(32, 137, 9, 0.611); */
-}
-
-.service {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: flex-start;
-  gap: 2.5rem;
-  align-items: center;
-  width: 100%;
-  background-color: rgba(12, 107, 26, 0.471);
-
-
-}
-
-.service img {
-  display: block;
-  width: clamp(4rem, 5vw, 8rem);
- 
+  justify-content: center;
+  gap: 3.5rem;
   
 }
 
+
+
+@media (min-width: 1024px) {
+  .container_services {
+    flex-direction: row;
+    gap:clamp(2.5rem, 2vw, 4rem);
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+.container_service {
+  /
+    flex: 1 1 45%; /* Garantit que chaque service occupe presque 50% */
+    max-width: 45%; /* Évite que le dernier élément prenne toute la ligne */
+    
+}
+
+}
+
+.service_caption img {
+  display: block;
+  width:clamp(4rem 5vw 8rem);
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+
+ 
+}
+
 .lien_service {
-  /* color: var(--green); */
-  transition-duration: 0.2s;
   padding: 0.5rem 2rem;
   background-color: rgb(100, 67, 7);
   color: white;
- 
-  margin-bottom: 5rem;
-
   display: inline-block;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
   transition: 
     transform 0.3s ease,
     background-color 0.3s ease;
@@ -363,33 +351,48 @@ color: rgba(255, 255, 255, 0.64);
   transform: scale(1.08); /* grossit légèrement */
 }
 
+/* ========== CAPTION ========== */
 
 
 
-@media(min-width :1024px) {
-  .container_services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 6rem; /* espace entre les blocs */
-    justify-content: flex-start;
-  }
-    .container-service {
-    flex-direction: column;
-    flex: 1 1 calc(50% - 3rem); /* 2 colonnes avec un espace de 3rem */
-    max-width: 50%;
-    
-  }
-  .service {
-
-    flex-direction: row;
-  }
+.service_caption {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* S'assure que l'image et le caption restent ensemble */
 }
 
 
+  .caption {
+    position: absolute;
+    bottom: 0; /* Fixe en bas de l'image */
+    left: 0;
+    width: 100%;
+    height: 30%; /* Taille contrôlée */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  
+
+  .service_caption:hover .caption {
+    height: 100%; /* Remplit toute l'image progressivement */
+    background-color: rgba(0, 0, 0, 0.7); /* Assombri légèrement au survol */
+}
+
+  
 /* ========== SECTION A PROPOS ========== */
 .presentation{
-  height: 70vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -416,22 +419,72 @@ color: rgba(255, 255, 255, 0.64);
 .container_presentation {
   position: relative;
   margin: 0 auto;
-
-  text-align: center;
+    text-align: center;
   z-index: 1;
   color: rgb(255, 255, 255);
-  width: clamp(30rem, 90%, 1200rem);
-    background-color: rgba(0, 0, 0, 0.352);
+  width: clamp(80%, 60%, 1200rem);
+  height:auto;
+    background-color: rgba(0, 0, 0, 0.5);
     /* background-color: rgba(0, 0, 0, 0.3); */
     padding: clamp(2rem, 5vw,7rem);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+
 }
 
 .container_presentation h2 {
   margin-bottom: clamp(4rem, 5rem, 8rem);
   margin-top: clamp(4rem, 5rem, 8rem);
+}
+
+
+/* ========== ZONE INTERVENTION ========== */
+
+.zone-intervention {
+  background-color: #f5f5f5;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.container_zone {
+  max-width: 900px;
+  margin: auto;
+}
+
+.zone-intervention h2 {
+
+  color: #317f13;
+  margin-bottom: 2rem;
+}
+
+.zone-intervention p {
+
+  color: #222;
+  line-height: 1.6;
+}
+
+
+.villes-desservies {
+  background-color: #e6f2e6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.container_villes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.container_villes li a {
+  text-decoration: none;
+  color: #317f13;
+  font-weight: bold;
 }
 /* ========== footer ========== */
 
