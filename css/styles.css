@@ -45,13 +45,17 @@
 
 .header-background {
     position: relative;
-    height: 100vh;
+    min-height: 100VH;
     background-image: url("../images/ai-generated-8550769_1280.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    
   }
+
+
+  
 
 nav {
     /* border: 2px dashed red; */
@@ -391,15 +395,30 @@ color: rgba(255, 255, 255, 0.64);
 
   
 /* ========== SECTION A PROPOS ========== */
-.presentation{
-  height:  100vh;
-  overflow: hidden;
+.presentation {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5rem 2rem;
 
+  flex-direction: column;
+  min-height: auto;
+    /* Pas de hauteur fixe ici */
+}
+
+
+
+
+@media (min-width: 768px) {
+  .presentation {
+    height: 100vh;
+  }
 }
 .presentation, .container_presentation {
   position: relative;
+
   
 }
 
@@ -417,28 +436,30 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 .container_presentation {
-  position: relative;
+
   margin: 0 auto;
-    text-align: center;
+  text-align: center;
   z-index: 1;
   color: rgb(255, 255, 255);
-  width: clamp(90%, 60%, 1200rem);
-  height:auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    padding: clamp(2rem, 5vw,7rem);
+
+  /* MODIFICATION ICI */
+  width: 100%;
+  max-width: 120rem; /* ← 900px max par sécurité */
+  padding: clamp(2rem, 4vw, 7rem);
+
+  background-color: rgba(0, 0, 0, 0.5);
+
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-
-
 }
 
 .container_presentation h2 {
-  margin-bottom: clamp(2rem, 2rem, 8rem);
-  margin-top: clamp(2rem, 2rem, 8rem);
+  margin-bottom: clamp(0.5rem, 1vw, 8rem);
+  line-height: 1;
+  margin-top: clamp(1rem, 2rem, 8rem);
 }
 
 
@@ -451,7 +472,7 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 .container_zone {
-  max-width: 900px;
+  max-width: 90rem;
   margin: auto;
 }
 
@@ -464,7 +485,7 @@ color: rgba(255, 255, 255, 0.64);
 .zone-intervention p {
 
   color: #222;
-  line-height: 1.6;
+
 }
 
 
