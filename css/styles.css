@@ -48,12 +48,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 100svh; */
+  min-height: 100svh;
+  /* fallback */
+  min-height: 100vh;
 
     background-image: url("../images/ai-generated-8550769_1280.webp");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
    
   }
@@ -61,6 +63,7 @@
 @media (min-width:768px){
   .header-background {
     min-height: 100vh;
+    background-attachment: fixed;
   }
 }
   
