@@ -415,88 +415,6 @@ color: rgba(255, 255, 255, 0.64);
     background-color: rgba(0, 0, 0, 0.7); /* Assombri légèrement au survol */
 }
 
-
-
-/* ========== ZONE INTERVENTION ========== */
-
-.zone-intervention {
-  background-color: #f5f5f5;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.container_zone {
-  max-width: 90rem;
-  margin: auto;
-  padding: 0 2rem;
-}
-
-.zone-intervention h2 {
-
-  color: #317f13;
-  margin-bottom: 2rem;
-}
-
-.zone-intervention p {
-
-  color: #222;
-
-}
-
-
-.villes-desservies {
-  background-color: #e6f2e6;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.container_villes ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.container_villes li a {
-  text-decoration: none;
-  color: #317f13;
-  font-weight: bold;
-}
-/* ========== GOOGLE MAPS ========== */
-.map-container {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  margin-top: 3rem;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.contact {
-  display: flex;
-  flex-direction: row;
-}
-.contact-address {
-  margin-top: 2rem;
-  font-style: normal;
-  background: #f9f9f9;
-  padding: 1rem 1.5rem;
-  border-left: 4px solid #3a6d32;
-  border-radius: 4px;
-  color: #333;
-  line-height: 1.6;
-  max-width: 400px;
-}
-
-  
 /* ========== SECTION A PROPOS ========== */
 .presentation {
   position: relative;
@@ -566,6 +484,179 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 
+/* ========== ZONE INTERVENTION ========== */
+
+.zone-intervention {
+  background-color: #f5f5f5;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.container_zone {
+  max-width: 90rem;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.zone-intervention h2 {
+
+  color: #317f13;
+  margin-bottom: 2rem;
+}
+
+.zone-intervention p {
+
+  color: #222;
+
+}
+
+.container_villes {
+  padding-top: 2rem;
+}
+
+.container_villes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.container_villes li a {
+  text-decoration: none;
+  color: #7f4d13;
+  font-weight: bold;
+}
+/* ========== COORDONNEES ========== */
+/* ========== GOOGLE MAPS ========== */
+
+.coordonnées {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("../images/fern-leaves-black-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.coordonnées_container {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.coordonnées_container h2{
+  padding-top: 10rem;
+}
+
+
+.coordonnées_container h2, p {
+  color: white; 
+
+}
+
+.coordonnées_container h3 {
+  color: var(--green);
+  padding-bottom: 9rem;
+
+}
+.coordonnées_container h2, h3 {
+  line-height: 1.5;
+}
+
+
+
+.map-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-top: 3rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+
+.contact-address, .contact-info, .btn-contact {
+  
+  font-style: normal;
+  background: #f9f9f953;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #3a6d32;
+  border-radius: 4px;
+  color: #ffffff;
+  line-height: 1.6;
+  width: 50%;
+
+  align-content: center;
+  display: block;
+
+}
+
+@media(min-width:768px) {
+  .contact {
+    flex-direction: row;
+    align-items: normal;
+  }
+  .contact-address, .contact-info, .btn-contact {
+    width: 100%;
+  }
+
+}
+/* Bouton avec effet au survol */
+.btn-contact {
+  font-weight: bold;
+  color: #fcfcfc;
+  border: 2px solid #317f13;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.btn-contact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #317f13;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.btn-contact:hover {
+  color: white;
+}
+
+.btn-contact:hover::before {
+  width: 100%;
+}
+
+  
+
+
 
 /* ========== footer ========== */
 
@@ -585,9 +676,11 @@ color: rgba(255, 255, 255, 0.64);
     align-items: center;
     width: 100%;
     padding: 1rem 3rem;
-
+justify-content: center;
     display: flex;
     flex-direction: column;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    
    
     
 
