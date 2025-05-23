@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100svh;
+  /* min-height: 100svh; */
 
     background-image: url("../images/ai-generated-8550769_1280.webp");
     background-size: cover;
@@ -58,7 +58,11 @@
    
   }
 
-
+@media (min-width:768px){
+  .header-background {
+    min-height: 100vh;
+  }
+}
   
 
 nav {
