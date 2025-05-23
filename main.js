@@ -1,3 +1,5 @@
+// GESTION MENU BURGER
+
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.main-menu');
@@ -20,4 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+// GESTION BTN CTA
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const cta = document.querySelector(".cta-fixe");
 
+  // Obtenir la hauteur du header
+  const headerBottom = header.offsetTop + header.offsetHeight;
+
+  if (window.scrollY > headerBottom) {
+    cta.classList.add("visible");
+  } else {
+    cta.classList.remove("visible");
+  }
+});

@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100Svh;
 
     background-image: url("../images/ai-generated-8550769_1280.webp");
     background-size: cover;
@@ -58,13 +58,7 @@
    
   }
 
-  .overlay-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
+
   
 
 nav {
@@ -181,7 +175,13 @@ nav a {
   }
 
 /* ========== OVERLAY ========== */
-
+  .overlay-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
 .overlay {
   width: 100%;
   max-width: clamp(30rem, 90%, 120rem);
@@ -227,8 +227,8 @@ color: rgba(255, 255, 255, 0.64);
 
 .cta-fixe {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 6rem;
+    right: 6rem;
     z-index: 999;
     padding: 1rem 2rem;
     background-color: rgb(37, 172, 51);
@@ -238,6 +238,16 @@ color: rgba(255, 255, 255, 0.64);
     border-radius: 9999px; /* pill shape */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, background-color 0.3s;
+  }
+  .cta-fixe {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  
+  .cta-fixe.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .cta-fixe:hover {
@@ -519,20 +529,34 @@ color: rgba(255, 255, 255, 0.64);
   footer {
 
     background-color: black;
-    height: 6vh;
+    
     color: white;
-    display: flex;
-    align-items: center;
+   
+
 
     
     
   }
   
   .container_footer {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    padding: 1rem 3rem;
 
+    display: flex;
+    flex-direction: column;
+   
+    
+
+  }
+
+  .container_footer a {
+    display: block;
+  }
+
+  @media (min-width:767px) {
+    .container_footer {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
