@@ -415,6 +415,86 @@ color: rgba(255, 255, 255, 0.64);
     background-color: rgba(0, 0, 0, 0.7); /* Assombri légèrement au survol */
 }
 
+
+
+/* ========== ZONE INTERVENTION ========== */
+
+.zone-intervention {
+  background-color: #f5f5f5;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.container_zone {
+  max-width: 90rem;
+  margin: auto;
+}
+
+.zone-intervention h2 {
+
+  color: #317f13;
+  margin-bottom: 2rem;
+}
+
+.zone-intervention p {
+
+  color: #222;
+
+}
+
+
+.villes-desservies {
+  background-color: #e6f2e6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.container_villes ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.container_villes li a {
+  text-decoration: none;
+  color: #317f13;
+  font-weight: bold;
+}
+/* ========== GOOGLE MAPS ========== */
+.map-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-top: 3rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+.contact-address {
+  margin-top: 2rem;
+  font-style: normal;
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #3a6d32;
+  border-radius: 4px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
   
 /* ========== SECTION A PROPOS ========== */
 .presentation {
@@ -485,52 +565,7 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 
-/* ========== ZONE INTERVENTION ========== */
 
-.zone-intervention {
-  background-color: #f5f5f5;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.container_zone {
-  max-width: 90rem;
-  margin: auto;
-}
-
-.zone-intervention h2 {
-
-  color: #317f13;
-  margin-bottom: 2rem;
-}
-
-.zone-intervention p {
-
-  color: #222;
-
-}
-
-
-.villes-desservies {
-  background-color: #e6f2e6;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.container_villes ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.container_villes li a {
-  text-decoration: none;
-  color: #317f13;
-  font-weight: bold;
-}
 /* ========== footer ========== */
 
   footer {
