@@ -22,11 +22,11 @@
 
   h1 {
   font-size: clamp(3.5rem, 5vw, 8rem);
-  font-weight: 600;
+  font-weight:bold;
 }
   h2 {
     font-size: clamp(2.5rem, 4.5vw, 5rem);
-    font: 600;
+    font-weight: bold;
   }
 
   h3 {
@@ -81,6 +81,9 @@ nav {
     position: relative;
     z-index: 2;
     font-size: clamp(1.5rem, 2vw, 1.9rem);
+    top:0;
+    left: 0;
+    position: fixed;
   
 }  
 
@@ -159,7 +162,7 @@ nav a {
       padding: 2rem;
       transform: translateY(-200%);
       transition: transform 0.3s ease-in-out;
-      z-index: 1000;
+      z-index: 2000;
     }
   
     .main-menu.show {
@@ -488,15 +491,20 @@ color: rgba(255, 255, 255, 0.64);
 /* ========== ZONE INTERVENTION ========== */
 
 .zone-intervention {
-  background-color: #f5f5f5;
+  /* background-color: #ffffff; */
   text-align: center;
   padding-bottom:9rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
 }
 
 .container_zone {
   max-width: 90rem;
   margin: auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .zone-intervention h2 {
@@ -511,6 +519,31 @@ color: rgba(255, 255, 255, 0.64);
   color: #222;
 
 }
+/* ========== IMAGE ========== */
+.zone-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+ 
+
+
+.zone-image img {
+
+  max-width: 100%;
+
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  display: block;
+
+}
+
 
 .container_villes {
   padding-top: 4rem;
@@ -660,6 +693,39 @@ color: rgba(255, 255, 255, 0.64);
 }
 
   
+
+/* ========== btn de retour en haut de page ========== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 8rem;
+  right: 0;
+  background-color: var(--green);
+  color: white;
+  padding: 0.2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.5rem;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  background-color: #0bb000;
+}
+
+.scroll-to-top.visible {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+.scroll-to-top.visible:hover {
+  opacity: 1;
+
+}
 
 
 
