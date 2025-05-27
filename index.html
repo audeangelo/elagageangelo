@@ -238,7 +238,7 @@
 
         <!-- Google Maps par un bloc inactif -->
         <div id="map-placeholder" class="map-placeholder">
-          <img src="images/map-static.webp" alt="Localisation Elagage Angelo à Redon">
+          <img src="images/map-static.webp" alt="Localisation Elagage Angelo à Redon" loading="lazy">
            <!-- L’iframe sera injectée ici par JavaScript si consentement -->
         <!-- Voile avec bouton d’activation -->
           <div class="map-overlay">
@@ -296,14 +296,15 @@
 
   <!-- BANNIERE COOKIES -->
 
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-live="polite">
+    <p id="cookie-title" class="sr-only">Information sur l'utilisation des cookies</p>
     <p>
       Ce site utilise des cookies pour afficher du contenu externe comme Google Maps.
       <br>En poursuivant, vous acceptez l'utilisation des cookies nécessaires.
     </p>
     <div class="cookie-buttons">
-      <button id="accept-cookies">Accepter</button>
-      <button id="refuse-cookies">Refuser</button>
+      <button id="accept-cookies" aria-label="Accepter les cookies">Accepter</button>
+      <button id="refuse-cookies" aria-label="Refuser les cookies">Refuser</button>
     </div>
   </div>
   

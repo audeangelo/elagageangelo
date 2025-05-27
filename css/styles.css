@@ -570,7 +570,7 @@ color: rgba(255, 255, 255, 0.64);
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  background-image: url("../images/fern-leaves-black-background.jpg");
+  background-image: url("../images/fern-leaves-black-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -788,6 +788,7 @@ color: rgba(255, 255, 255, 0.64);
 body.cookies-visible {
   padding-bottom: 10rem; /* pour laisser la place à la bannière sans masquer le footer */
 }
+
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -799,6 +800,17 @@ body.cookies-visible {
   font-size: 1.4rem;
   text-align: center;
   z-index: 2000;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .cookie-buttons {
