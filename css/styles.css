@@ -474,6 +474,9 @@ color: rgba(255, 255, 255, 0.64);
   padding: 0 2rem;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .zone-intervention h2 {
@@ -514,9 +517,7 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 
-.container_villes {
-  padding-top: 4rem;
-}
+
 
 .container_villes ul {
   list-style: none;
@@ -532,6 +533,7 @@ color: rgba(255, 255, 255, 0.64);
   color: #7f4d13;
   font-weight: bold;
 }
+
 /* ========== COORDONNEES ========== */
 /* ========== GOOGLE MAPS ========== */
 
@@ -615,7 +617,7 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 .map-overlay button {
-  background-color: var(--green, #259c33);
+  background-color: rgb(122, 122, 121);
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -627,7 +629,7 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 .map-overlay button:hover {
-  background-color: #0bb000;
+  background-color: rgb(66, 66, 65);
 }
 
 /* Quand le consentement est donné, on remplace tout */
@@ -651,6 +653,7 @@ color: rgba(255, 255, 255, 0.64);
 
 .contact {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
   flex-direction: column;
   justify-content: center;
@@ -662,37 +665,46 @@ color: rgba(255, 255, 255, 0.64);
 
 
 
-.contact-address, .contact-info, .btn-contact {
+.contact-address, .contact-info {
   
   font-style: normal;
-  background: #f9f9f99e;
+  background: #0200005b;
   padding: 1rem 1.5rem;
   border-left: 4px solid #317f13;
   border-radius: 4px;
   color: #ffffff;
   line-height: 1.6;
-  width: 70%;
-
-
+  width: 100%;
+  
+  
   align-content: center;
   display: block;
-
+  
 }
+
 
 @media(min-width:768px) {
   .contact {
     flex-direction: row;
     align-items: normal;
   }
-  .contact-address, .contact-info, .btn-contact {
+  .contact-address, .contact-info {
     width: 100%;
+    max-width: 48%;
   }
 
 }
 /* Bouton avec effet au survol */
 .btn-contact {
+  margin: 7rem 0;
+  display: block;
+  max-width: 30rem;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  background: #317f13;
+  text-align: center;
   font-weight: bold;
-  color: #317f13;
+  color: #fffffe;
   border: 2px solid #317f13;
   border-radius: 4px;
   text-decoration: none;
@@ -709,13 +721,13 @@ color: rgba(255, 255, 255, 0.64);
   top: 0;
   height: 100%;
   width: 0;
-  background-color: #317f13;
+  background-color: #ffffff;
   z-index: -1;
   transition: width 0.3s ease;
 }
 
 .btn-contact:hover {
-  color: white;
+  color: #317f13;
 }
 
 .btn-contact:hover::before {
