@@ -234,37 +234,6 @@ color: rgba(255, 255, 255, 0.64);
     text-transform: uppercase;
 }
 
-/* ========== BOUTON CTA ========== */
-
-.cta-fixe {
-    position: fixed;
-    bottom: 6rem;
-    right: 6rem;
-    z-index: 999;
-    padding: 1rem 2rem;
-    background-color: rgb(37, 172, 51);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 9999px; /* pill shape */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, background-color 0.3s;
-  }
-  .cta-fixe {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-  }
-  
-  .cta-fixe.visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .cta-fixe:hover {
-    background-color: #0bb000;
-    transform: scale(1.05);
-  }
 
   /* ========== FLECHE SCROLL ========== */
 
@@ -635,6 +604,10 @@ color: rgba(255, 255, 255, 0.64);
   text-align: center;
   z-index: 2;
 }
+.map-placeholder {
+  position: relative;
+  z-index: 0;
+}
 
 .map-overlay p {
   font-size: 1.6rem;
@@ -650,6 +623,7 @@ color: rgba(255, 255, 255, 0.64);
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  
 }
 
 .map-overlay button:hover {
@@ -754,7 +728,7 @@ color: rgba(255, 255, 255, 0.64);
 
 .scroll-to-top {
   position: fixed;
-  bottom: 12rem;
+  bottom: 40%;
   right: 0;
   background-color: var(--green);
   color: white;
