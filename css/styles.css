@@ -517,7 +517,9 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 
-
+.container_villes{
+  padding-top: 3rem;
+}
 
 .container_villes ul {
   list-style: none;
@@ -712,6 +714,7 @@ color: rgba(255, 255, 255, 0.64);
   overflow: hidden;
   z-index: 1;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-contact::before {
