@@ -602,22 +602,78 @@ color: rgba(255, 255, 255, 0.64);
   line-height: 1.5;
 }
 
+/* GOOGLE MAPS */
 
-
-.map-container {
-  aspect-ratio: 16 / 9;
+.map-placeholder {
+  position: relative;
   width: 100%;
-  margin-top: clamp(4rem, 5vh,6rem);
-  border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: clamp(3rem, 5vw, 6rem);
+  aspect-ratio: 16 / 9;
 }
 
-.map-container iframe {
+/* Image statique */
+.map-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Voile semi-transparent avec message + bouton */
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.map-overlay p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.map-overlay button {
+  background-color: var(--green, #259c33);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.map-overlay button:hover {
+  background-color: #0bb000;
+}
+
+/* Quand le consentement est donné, on remplace tout */
+.map-placeholder.active {
+  padding: 0;
+}
+
+.map-placeholder.active img,
+.map-placeholder.active .map-overlay {
+  display: none;
+}
+
+.map-placeholder.active iframe {
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
 }
+
+/* ----------- */
 
 .contact {
   display: flex;
@@ -698,14 +754,14 @@ color: rgba(255, 255, 255, 0.64);
 
 .scroll-to-top {
   position: fixed;
-  bottom: 8rem;
+  bottom: 12rem;
   right: 0;
   background-color: var(--green);
   color: white;
   padding: 0.2rem 1.5rem;
   text-align: center;
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem,2vw, 2.5rem);
   z-index: 3000;
   opacity: 0;
   pointer-events: none;
@@ -728,6 +784,39 @@ color: rgba(255, 255, 255, 0.64);
 }
 
 
+/* ========== COOKIES ========== */
+body.cookies-visible {
+  padding-bottom: 10rem; /* pour laisser la place à la bannière sans masquer le footer */
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #222222;
+  color: white;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  z-index: 2000;
+}
+
+.cookie-buttons {
+  margin-top: 1rem;
+}
+
+.cookie-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  cursor: pointer;
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
 
 /* ========== footer ========== */
 
