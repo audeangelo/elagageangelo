@@ -14,6 +14,7 @@
     font-size: clamp(1.6rem, 3vw, 1.8rem);
     line-height: 1.7;
     font-weight:400;
+    position: relative;
   }
 
   h1, h2, h3 {
@@ -701,8 +702,8 @@ color: rgba(255, 255, 255, 0.64);
   margin: 7rem 0;
   display: block;
   max-width: 30rem;
-  font-size: clamp(1.8rem, 2vw,2.2rem);
-  padding: 1rem 1.5rem;
+  font-size: clamp(1.8rem, 2vw,2.1rem);
+  padding: 0.5rem 1rem;
   background: #317f13;
   text-align: center;
   font-weight: 500;
@@ -743,7 +744,7 @@ color: rgba(255, 255, 255, 0.64);
 
 .scroll-to-top {
   position: fixed;
-  bottom: 40%;
+  bottom: 20%;
   right: 0;
   background-color: var(--green);
   color: white;
@@ -856,4 +857,31 @@ justify-content: center;
       flex-direction: row;
       justify-content: space-between;
     }
+  }
+
+
+  /* ========== ANIMATION ELAGUEUR ========== */
+  /* #elagueur {
+    position: fixed;
+    pointer-events: none;
+    display: block;
+    top: 0;
+    right: 0rem; 
+/
+
+    width: 7em;
+    height: auto;
+    z-index: 2;
+    transition: transform 0.3s ease-out;
+  } */
+
+  #elagueur {
+    position: fixed;
+    top: 6rem; /* juste sous le menu */
+    right: 2rem;
+    width: clamp(80px, 10vw, 150px);
+    z-index: 10;
+    transform: translateY(0);
+    pointer-events: none;
+    transition: transform 0.1s linear;
   }

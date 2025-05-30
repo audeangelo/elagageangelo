@@ -118,4 +118,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+  /* ========== ANIMATION ELAGUEUR ========== */
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elagueur = document.querySelector("#elagueur");
+    const footer = document.querySelector("footer");
+  
+    if (!elagueur || !footer) return;
+  
+    let lastScrollY = window.scrollY;
+    let currentY = 0;
+    const minY = 0;
+    const maxY = () => {
+      const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+      const windowHeight = window.innerHeight;
+      const elagueurHeight = elagueur.offsetHeight;
+      return footerTop - elagueurHeight - 20; // marge au-dessus du footer
+    };
+  
+    const update = () => {
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastScrollY;
+  
+      // Incrémenter ou décrémenter la position
+      currentY += delta * 0.1; // 0.1 = douceur du mouvement
+  
+      // Limites
+      currentY = Math.max(minY, Math.min(currentY, maxY() - 100)); // 100 = sécurités visuelles
+  
+      // Appliquer la translation
+      gsap.to(elagueur, {
+        y: currentY,
+        duration: 0.3,
+        ease: "power1.out",
+      });
+  
+      lastScrollY = scrollY;
+    };
+  
+    window.addEventListener("scroll", update);
+    window.addEventListener("resize", () => {
+      currentY = Math.min(currentY, maxY() - 100); // recalcule max si resize
+    });
+  });
   
