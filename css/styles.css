@@ -240,7 +240,7 @@ color: rgba(255, 255, 255, 0.64);
   /* ========== FLECHE SCROLL ========== */
 
   .scroll-down {
-    position: absolute;
+    /* position: relative; */
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);

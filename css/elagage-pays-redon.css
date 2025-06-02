@@ -1,0 +1,42 @@
+:root {
+  --green :rgb(37, 172, 51);
+}
+
+.header-background-elagage-redon {
+  height:80vh;
+  min-height: 80svh;
+  /* fallback */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, black 100%),
+    url('../images/tree-2699420_1920.jpg');
+  
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+
+}
+
+.elagage_redon {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, black 100%), url('../images/black-370118_1920.png');
+  padding: 8rem 6rem;
+}
+
+.elagage_redon p, ul {
+  color: white;
+  text-align: justify;
+}
+
+.elagage_redon h2, h3 {
+  color: var(--green);
+  padding-top:5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  line-height: 1.2;
+}
