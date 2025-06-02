@@ -168,6 +168,7 @@ nav a {
   
     .main-menu.show {
       transform: translateY(0);
+      
     }
   
     .main-menu li {
@@ -884,4 +885,8 @@ justify-content: center;
     transform: translateY(0);
     pointer-events: none;
     transition: transform 0.1s linear;
+  }
+
+  body.menu-open #elagueur {
+    z-index: 1; /* en dessous du menu mobile */
   }

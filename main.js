@@ -4,18 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (burger && menu) {
     burger.addEventListener('click', () => {
-      menu.classList.toggle('show');
-      burger.textContent = menu.classList.contains('show') ? '✕' : '☰';
+      const isOpen = menu.classList.toggle('show');
+      burger.textContent = isOpen ? '✕' : '☰';
+      document.body.classList.toggle('menu-open', isOpen); // ← MAJ ici
     });
 
     document.addEventListener('click', (e) => {
       if (!menu.contains(e.target) && !burger.contains(e.target)) {
         menu.classList.remove('show');
         burger.textContent = '☰';
+        document.body.classList.remove('menu-open'); // ← CORRECTION ici
       }
     });
   }
 });
+
 
 
 
