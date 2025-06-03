@@ -12,8 +12,8 @@
   align-items: center;
   
   background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, black 100%),
-    url('../images/tree-2699420_1920.jpg');
+    linear-gradient(to bottom, rgba(13, 113, 24, 0) 60%, black 100%),
+    url('../images/tree-6002957_1920.jpg');
   
   background-color: black;
   background-size: cover;
@@ -23,9 +23,11 @@
 
 }
 
+
+
 .elagage_redon {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, black 100%), url('../images/black-370118_1920.png');
-  padding: 8rem 6rem;
+  padding: clamp(4rem, 8vh, 8rem) clamp(2rem, 5vw, 6rem);
 }
 
 .elagage_redon p, ul {
@@ -39,4 +41,30 @@
   padding-bottom: 2rem;
   text-align: center;
   line-height: 1.2;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 3rem auto;
+  height: 4rem;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  min-width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 4vw,3rem);
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+ 
+
 }
