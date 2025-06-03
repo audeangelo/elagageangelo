@@ -842,7 +842,7 @@ body.cookies-visible {
     padding: 1rem 3rem;
 justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     font-size: clamp(1rem, 3vw, 1.8rem);
     
    
@@ -880,7 +880,7 @@ justify-content: center;
   #elagueur {
     position: fixed;
     top: 6rem; /* juste sous le menu */
-    right: 2rem;
+    right: 0rem;
     width: clamp(80px, 10vw, 150px);
     z-index: 10;
     transform: translateY(0);

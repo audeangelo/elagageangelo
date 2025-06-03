@@ -2,9 +2,13 @@
   --green :rgb(37, 172, 51);
 }
 
+section > p > strong {
+  color: var(--green);
+}
+
 .header-background-elagage-redon {
-  height:80vh;
-  min-height: 80svh;
+  height:60vh;
+  min-height: 60svh;
   /* fallback */
   display: flex;
   flex-direction: column;
@@ -17,39 +21,65 @@
   
   background-color: black;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: scroll;
   background-repeat: no-repeat;
 
+}
+
+@media(min-width:1024px) {
+  .header-background-elagage-redon{
+    height: 80vh;
+  }
 }
 
 
 
 .elagage_redon {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, black 100%), url('../images/black-370118_1920.png');
-  padding: clamp(4rem, 8vh, 8rem) clamp(2rem, 5vw, 6rem);
+  padding: clamp(4rem, 10vh, 10rem) clamp(2rem, 5vw, 6rem);
 }
 
 .elagage_redon p, ul {
   color: white;
   text-align: justify;
 }
-
-.elagage_redon h2, h3 {
-  color: var(--green);
-  padding-top:5rem;
-  padding-bottom: 2rem;
+.elagage_redon  h2 {
+  color: white;
   text-align: center;
-  line-height: 1.2;
+}
+.elagage_redon  h3 {
+  color: var(--green);
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.container_carousel {
+  margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5.2rem, 6vh, 6rem);
 }
 
 .carousel-wrapper {
   overflow: hidden;
+  display: flex;
   width: 100%;
-  max-width: 500px;
-  margin: 3rem auto;
-  height: 4rem;
+  max-width: 80%;
+  margin:0 auto;
+  height: clamp(10rem, 18vh,25rem);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  border-bottom: 1rem solid rgb(21, 101, 29);
+  border-radius: 0.5rem;
+  background-image: url('../images/28.jpg');
+  background-color: black;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
 }
 
 .carousel-track {
@@ -58,13 +88,129 @@
 }
 
 .carousel-item {
-  flex: 0 0 100%;
+
+  /* flex: 0 0 100%; */
   min-width: 100%;
   text-align: center;
   font-size: clamp(2rem, 4vw,3rem);
   font-weight: bold;
-  color: white;
-  text-transform: uppercase;
- 
+  color: rgb(89, 45, 45);
+text-shadow: 
+  1px 1px 0 #fff, 
+  -1px -1px 1px #00000044;
 
+  padding: 0 2rem;
+  text-transform: uppercase;
+
+  word-break: break-word;     
+  /* coupe un mot s’il est trop long */
+  white-space: normal;        
+  /* autorise les retours à la ligne */
+  overflow-wrap: break-word;  
+  /* assure le retour à la ligne pour certains navigateurs */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.carousel-item strong {
+  margin-right: 1rem;
+}
+
+.presentation_elagage > p:nth-of-type(1),
+.presentation_elagage > p:nth-of-type(2){
+  padding-bottom: 2rem;
+}
+.photo_equipe {
+  height: 40rem;
+  width: 100%;
+
+  background-image: url('../images/ChatGPT\ Image\ 3\ juin\ 2025\,\ 12_08_42.png');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+}
+
+@media (min-width: 1280px) {
+
+  .container_carousel {
+    margin: 12rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Aligne les hauteurs */
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .presentation_elagage,
+  .carousel-section, .photo_equipe {
+    width: 100%;
+    max-width: 48%;
+    height: auto;
+    background-size: cover;
+
+  }
+
+  .photo_equipe{
+    border-bottom: 1rem solid rgb(21, 101, 29);
+  border-radius: 0.5rem;
+  }
+
+  .presentation_elagage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* ✅ Fait que le carrousel prenne toute la hauteur de la section voisine */
+  .carousel-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+/* ========== CONTACT ELAGAGE ========== */
+.container_contact_elagage h2{
+  padding-top: clamp(4rem, 6vh,8rem);
+}
+
+.container_contact_elagage h3{
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact_elagage {
+  text-align: center;
+  text-align: justify;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+
+}
+.btn-contact {
+  margin: 5rem auto;
+  
+}
+
+.autres_services_elagage h3 {
+  padding-bottom: 10rem;
+}
+
+.autres_services_elagage h2{
+  padding-top: clamp(4rem, 6vh,8rem);
 }
