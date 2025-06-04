@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://audeangelo.github.io/elagageangelo/sitemap.xml
+Sitemap: https://audeangelo.github.io/elagageangelo/sitemap.txt
