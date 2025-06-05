@@ -13,19 +13,28 @@
        // Vérification des champs
     const name = form.name.value.trim();
     const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
     const message = form.message.value.trim();
 
-    if (!name || !email || !message) {
-      alert("Merci de remplir tous les champs obligatoires.");
-      return;
-    }
-
+    if (!name || !email || !phone || !message) {
+        alert("Merci de remplir tous les champs obligatoires.");
+        return;
+      }
+ // Vérifie mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert("Veuillez entrer une adresse email valide.");
       return;
     }
 
+    
+// Vérifie téléphone (basique)
+    const phoneRegex = /^[0-9\s\-\+\(\)]{8,20}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Numéro de téléphone invalide.");
+      return;
+    }
+//Vérifie reCAPTCHA
     if (grecaptcha.getResponse().length === 0) {
       alert("Veuillez valider le reCAPTCHA.");
       return;
