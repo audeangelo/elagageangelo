@@ -249,7 +249,7 @@ color: rgba(255, 255, 255, 0.64);
     color: white;
     animation: bounce 2s infinite;
     text-decoration: none;
-    z-index: 5;
+    z-index: 1;
     cursor: pointer;
   }
   
