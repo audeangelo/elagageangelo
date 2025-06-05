@@ -230,7 +230,7 @@ color: rgba(255, 255, 255, 0.64);
     /* color: transparent;
     -webkit-text-stroke: 1px white; 
     /* Contour blanc */
-    /* text-stroke: 0.5px white;          */ */
+    /* text-stroke: 0.5px white;          */ 
     /* Pour compatibilité éventuelle */
     /* font-weight: 300; */
     letter-spacing: 0.1rem;
@@ -314,11 +314,11 @@ color: rgba(255, 255, 255, 0.64);
   }
 .container_service {
   /
-    flex: 1 1 45%; /* Garantit que chaque service occupe presque 50% */
-    max-width: 45%; /* Évite que le dernier élément prenne toute la ligne */
-    
-}
-
+    flex: 1 1 45%;
+    /* Garantit que chaque service occupe presque 50% */
+    max-width: 45%; 
+    /* Évite que le dernier élément prenne toute la ligne */  
+  }
 }
 
 .service_caption img {
