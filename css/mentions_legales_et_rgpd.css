@@ -22,3 +22,7 @@ h2 {
 .header-background_mentions_legales{
 padding: 4rem 2rem;
 }
+
+.mentions_legales, .politique_cookies {
+    margin: 2rem 2rem;
+}
