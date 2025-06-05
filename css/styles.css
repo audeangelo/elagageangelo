@@ -839,19 +839,20 @@ body.cookies-visible {
   .container_footer {
     align-items: center;
     width: 100%;
-    padding: 1rem 3rem;
-justify-content: center;
+    padding: 2rem 3rem;
+    justify-content: center;
     display: flex;
     flex-direction: column-reverse;
-    font-size: clamp(1rem, 3vw, 1.8rem);
-    
-   
-    
-
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    gap: 1.5rem;
   }
 
   .container_footer a {
     display: block;
+  }
+
+  .container_footer a:hover {
+    color: var(--green);
   }
 
   @media (min-width:767px) {
@@ -863,19 +864,7 @@ justify-content: center;
 
 
   /* ========== ANIMATION ELAGUEUR ========== */
-  /* #elagueur {
-    position: fixed;
-    pointer-events: none;
-    display: block;
-    top: 0;
-    right: 0rem; 
-/
 
-    width: 7em;
-    height: auto;
-    z-index: 2;
-    transition: transform 0.3s ease-out;
-  } */
 
   #elagueur {
     position: fixed;

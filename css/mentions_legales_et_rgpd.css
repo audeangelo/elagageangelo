@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+h1, h2 {
+    color: #2aa942;
+}
+h1 {
+    
+    margin-bottom: 2rem;
+}
+h2 {
+    
+    margin-top: 2.5rem;
+}
+
+.header-background_mentions_legales{
+padding: 4rem 2rem;
+}
