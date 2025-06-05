@@ -746,7 +746,7 @@ color: rgba(255, 255, 255, 0.64);
 
 .scroll-to-top {
   position: fixed;
-  bottom: 20%;
+  bottom: 25%;
   right: 0;
   background-color: var(--green);
   color: white;
@@ -777,49 +777,45 @@ color: rgba(255, 255, 255, 0.64);
 
 
 /* ========== COOKIES ========== */
-body.cookies-visible {
-  padding-bottom: 10rem; /* pour laisser la place à la bannière sans masquer le footer */
-}
-
 .cookie-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #222222;
+  bottom: 2rem;
+  right: 2rem;
+  max-width: 320px;
+  background: #222;
   color: white;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   font-size: 1.4rem;
-  text-align: center;
   z-index: 2000;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.cookie-buttons {
-  margin-top: 1rem;
-}
-
-.cookie-buttons button {
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: var(--green);
-  color: white;
-  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
 .cookie-banner.hidden {
   display: none;
+}
+
+.cookie-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-buttons button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cookie-buttons button:hover {
+  background-color: #0f0; /* ou un vert plus clair */
 }
 
 /* ========== footer ========== */
