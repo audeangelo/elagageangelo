@@ -188,7 +188,17 @@ document.addEventListener('DOMContentLoaded', () => {
     setCookie('cookieConsent', 'accepted', 365);
     loadMap();
   });
+
 });
+
+/* ========== cest quoi ça ?  ========== */
+const cookieSettingsBtn = document.getElementById('cookie-settings');
+
+cookieSettingsBtn?.addEventListener('click', () => {
+  banner.classList.remove('hidden');
+  document.body.classList.add('cookies-visible');
+});
+
 
 
 

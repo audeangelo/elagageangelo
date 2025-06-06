@@ -10,6 +10,16 @@ body {
   color: rgb(195, 163, 163);
 }
 
+/* ========== HONEYPOT PERMET DE MASQUER LE CHAMP  ========== */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
 .form-section {
   padding: 12rem 1rem;
   text-align: center;
@@ -72,6 +82,19 @@ body {
   transform: scale(1.05);
 }
 
+/* ========== demande acceptation cookies ========== */
+.form-warning {
+  color: #ff4747;
+  background-color: #fff0f0;
+  border: 1px solid #ffcccc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: none;
+  font-size: 0.9rem;
+}
+
+
 .confirmation-message {
   display: none;
   color: var(--green);
@@ -89,4 +112,13 @@ body {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== case à cocher acceptation po de confidentialité (cookies) ========== */
+
+.form-warning {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }

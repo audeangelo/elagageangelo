@@ -38,10 +38,10 @@
 
 .logo {
     display: block;
-    height: clamp(4rem, 4vw, 8rem); 
+    height: clamp(4rem, 3vw, 8rem); 
     width:auto;
     flex-shrink: 0;      /* empêche l'image de rétrécir */
-    
+    padding: 0 1rem;
 }
 
 .header-background {
