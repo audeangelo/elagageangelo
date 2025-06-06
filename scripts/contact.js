@@ -126,3 +126,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+
+//   FAQ
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+  
+    faqItems.forEach(item => {
+      const button = item.querySelector(".faq-question");
+  
+      button.addEventListener("click", () => {
+        // Ferme tous les autres items
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove("open");
+        });
+  
+        // Bascule celui-ci
+        item.classList.toggle("open");
+      });
+    });
+  });
+  
+  
