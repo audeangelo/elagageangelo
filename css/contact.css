@@ -8,14 +8,18 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   color: rgb(195, 163, 163);
+  
 }
 
 /* ========== info-item ========== */
 .contact-infos {
   background-color: #fff;
+
+  
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
+  
   gap: 2rem;
   margin-bottom: 2rem;
   padding-top: 12rem;
@@ -24,12 +28,15 @@ body {
 
 .info-item {
   display: flex;
+  justify-content: left;
   align-items: center;
+  text-align: left;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
+  background-color: rgba(0,0,0,0.05);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
 }
 

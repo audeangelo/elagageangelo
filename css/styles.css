@@ -276,7 +276,7 @@ color: rgba(255, 255, 255, 0.64);
 .services h2{
   padding-top: 10rem;
 }
-.services h2, h3 {
+.services h2, .services h3 {
  text-align: center;
  line-height: 1.5;
   
